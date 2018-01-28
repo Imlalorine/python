@@ -58,5 +58,10 @@ f.close
 
 
 
-
+from random import randint
+#数据的排列
+list_1 = [4, 7, 3, 4, 1, 9, 8, 3, 7] #
+print sorted(list_1)#按从小到大排列
+print sorted(set(list_1)) #排除重复
+print sorted(set(list_1), key=list_1.index) #去除重复后按从小到达排列
 
