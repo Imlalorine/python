@@ -28,3 +28,13 @@ f.close()
 print "\n"
 
 
+# 从n个数字里抓取m个数值
+from random import randint
+n = 100
+list_1 = range (0, n)
+print list_1
+for i in range (0, 23):
+    j = randint (0, n)
+    print list_1 [j]
+    del list_1[j]
+    n -= 1
