@@ -38,3 +38,25 @@ for i in range (0, 23):
     print list_1 [j]
     del list_1[j]
     n -= 1
+    
+    
+#抽取随机数后，输出列表
+from random import randint
+n = 100
+list_1 = range (0, n)
+result = []
+f = open('随机数.txt','w')
+for i in range (0, 23):
+    j = randint (0, n)
+    print list_1 [j]
+    n -= 1
+    c = str(list_1 [j])
+    result.append(c)
+    f.write (c + ' ')
+    del list_1[j]
+f.close
+
+
+
+
+
