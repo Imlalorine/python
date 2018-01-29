@@ -65,3 +65,16 @@ print sorted(list_1)#按从小到大排列
 print sorted(set(list_1)) #排除重复
 print sorted(set(list_1), key=list_1.index) #去除重复后按从小到达排列
 
+
+#从字串中找出数字,并以字符串输出
+import re
+test = 'aAsmr3idd4bgs7Dlsf9eAF'
+print ''.join(re.findall('\d',test))
+print ''.join(i for i in test if i.isdigit())
+print filter(lambda x: x.isdigit(), test)
+
+
+
+
+
+
