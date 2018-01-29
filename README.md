@@ -74,6 +74,21 @@ print ''.join(i for i in test if i.isdigit())
 print filter(lambda x: x.isdigit(), test)
 
 
+#抓取某文件夹（和子文件夹）中的.txt文件
+import fnmatch
+import os
+path = '/Users/zhengshucheng/Documents/python/python'
+text_list = []
+for parent, dirnames, filename in os.walk(path):#parent 是文件或者文件夹的上一层， dirnames指遍历到文件夹，则内容放到dirnames里；
+    # 如果遍历到文件，则文件名字放到filename里
+    print filename
+    for filenames in filename:
+        text_list.append(filenames)
+    list_1 =  fnmatch.filter(text_list, '*.txt')
+print '\n'
+lsit_2 = sorted(set(list_1), reverse=True)
+print lsit_2
+
 
 
 
